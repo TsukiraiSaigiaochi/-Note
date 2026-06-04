@@ -4,16 +4,15 @@
 
 <div align="center">
 
-
 # ヰnote
 
-轻量本地的便签工具<br>
+A lightweight local sticky note app<br>
 
-基于 Tauri 2 + React 构建
+Built with Tauri 2 + React
 
-[反馈问题](https://github.com/TsukiraiSaigiaochi/-Note/issues) · [更新日志](https://github.com/TsukiraiSaigiaochi/-Note/releases)
+[Report Issues](https://github.com/TsukiraiSaigiaochi/-Note/issues) · [Download Release](https://github.com/TsukiraiSaigiaochi/-Note/releases/tag/APP)
 
-[![Version](https://img.shields.io/github/v/release/TsukiraiSaigiaochi/-Note)](https://github.com/TsukiraiSaigiaochi/-Note/releases/latest)
+[![Version](https://img.shields.io/github/v/release/TsukiraiSaigiaochi/-Note)](https://github.com/TsukiraiSaigiaochi/-Note/releases/tag/APP)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Stars](https://img.shields.io/github/stars/TsukiraiSaigiaochi/-Note?color=ffcb47&labelColor=black)</br>
 
@@ -26,9 +25,17 @@
 <!-- markdownlint-restore -->
 
 ---
->I will translate it into Japenese and English tomorrow
 
-## 创作动机
+> I will translate it into English and Japanese Tomorrow
+> But I wrote the key part  by English
+## About
+
+ヰnote 是一个轻量、本地、随叫随到的便签工具。
+
+它不是复杂的知识库，也不是沉重的工作流软件。  
+它更接近一个桌面上的草稿本：需要的时候打开，写下几句话，然后继续做自己的事情。
+
+## Motivation
 
 我一直想找一个用着顺手、随叫随到的简单笔记软件。
 
@@ -36,23 +43,27 @@
 
 于是，在一个不想复习期末考试的下午，它诞生了。
 
-## 功能特点
+## Features
 
-- **Markdown 编辑与预览** — 支持 Markdown 语法，用更接近写作的方式记录想法
+- **Markdown Editing and Preview** — 支持 Markdown 语法，用更接近写作的方式记录想法
 
-  ![主窗口截图](Docs/Images/main-window.png)
+  ![Main Window](Docs/Images/main-window.png)
 
-- **快捷便签** — 通过托盘或全局快捷键随时唤出便签窗口
+- **Quick Notes** — 通过托盘或全局快捷键随时唤出便签窗口
 
-  ![快捷便签示例](Docs/Images/quick-note.gif)
+  ![Quick Note](Docs/Images/quick-note.gif)
 
-- **本地存储** — 笔记内容保存在本地，不依赖云端服务
+- **Local Storage** — 笔记内容保存在本地，不依赖云端服务
 
-- **导入 Markdown** — 支持 `.md` 文件导入
+- **Markdown Import** — 支持 `.md` 文件导入
 
-## 应用场景
+## How to use
+- you can call it by Ctrl+Alt+A
+- you can also get a quick note by CTRL+ALT+Q
 
-- **桌子上的草稿本怎么用，它就怎么用**
+## Use Cases
+
+- **像使用桌子上的草稿本一样使用它**
 
 - 写代码的时候随手记一下思路
 
@@ -64,31 +75,72 @@
 
 - 当作临时剪贴板，暂存需要反复复制的文本
 
-## 下载安装
+## Download
 
-前往 [GitHub Releases](https://github.com/TsukiraiSaigiaochi/-Note/releases) 下载最新版本。
+Download the latest version from [GitHub Releases](https://github.com/TsukiraiSaigiaochi/-Note/releases/tag/APP).
 
+Windows users can download the installer from the Release page.
 
+> This project is still under development.  
+> If you encounter any problems, feel free to report them in [Issues](https://github.com/TsukiraiSaigiaochi/-Note/issues).
 
-## 从源码构建
+## Build from Source
 
-### 环境要求
+### Requirements
 
 - [Node.js](https://nodejs.org/) 18+
 - [Rust](https://www.rust-lang.org/tools/install)
 - [Tauri CLI 2](https://tauri.app/)
 
-### 步骤
+### Steps
 
 ```bash
 git clone https://github.com/TsukiraiSaigiaochi/-Note.git
 
 cd -Note
 
-npm install
+pnpm install
 
-# 开发模式
-npm run tauri dev
+# Run in development mode
+pnpm tauri dev
 
-# 构建发布版本
-npm run tauri build
+# Build release version
+pnpm tauri build
+```
+
+The build output is usually located at:
+
+```text
+src-tauri/target/release/bundle/
+```
+
+## Roadmap
+
+- 完善 Markdown 编辑与预览体验
+- 优化快捷便签窗口
+- 改进导入与本地存储逻辑
+- 补充更多截图与使用说明
+- 增加多语言 README 文档
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=TsukiraiSaigiaochi/-Note&type=Date&legend=top-left)](https://star-history.com/#TsukiraiSaigiaochi/-Note&Date)
+
+## Contributors
+
+[![contrib.rocks](https://contrib.rocks/image?repo=TsukiraiSaigiaochi/-Note&max=1000)](https://contrib.rocks/image?repo=TsukiraiSaigiaochi/-Note&max=1000)
+
+## License
+
+[MIT](LICENSE)
+
+## Language
+
+This README currently uses an English structure with Chinese descriptions.
+
+Japanese and English versions will be added later.  
+In the future, the documentation will be separated into multiple language files, such as:
+
+- `README.md`
+- `README.zh-CN.md`
+- `README.ja.md`
