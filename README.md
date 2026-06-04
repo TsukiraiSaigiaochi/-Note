@@ -4,11 +4,10 @@
 
 <div align="center">
 
-<img src="./src-tauri/icons/icon.png" width="120" alt="ヰnote 图标">
 
 # ヰnote
 
-轻量、本地、随叫随到的便签工具<br>
+轻量本地的便签工具<br>
 
 基于 Tauri 2 + React 构建
 
@@ -27,6 +26,7 @@
 <!-- markdownlint-restore -->
 
 ---
+>I will translate it into Japenese and English tomorrow
 
 ## 创作动机
 
