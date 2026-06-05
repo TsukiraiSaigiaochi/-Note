@@ -6,12 +6,15 @@ arch=('x86_64')
 url="https://github.com/TsukiraiSaigiaochi/-Note"
 license=('MIT')
 depends=('webkit2gtk-4.1' 'gtk3' 'libayatana-appindicator' 'gcc-libs' 'glib2')
-makedepends=('cargo' 'nodejs' 'pnpm')
+makedepends=('cargo' 'nodejs')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/APP.tar.gz")
 sha256sums=('SKIP')
 
 build() {
     cd "$srcdir/-Note-APP"
+    sed -i 's/"identifier": *"[^"]*"/"identifier": "com.note.ipad"/' src-tauri/tauri.conf.json
+    npm install -g pnpm --prefix="$srcdir/.pnpm"
+    export PATH="$srcdir/.pnpm/bin:$PATH"
     pnpm install --frozen-lockfile
     pnpm tauri build -b deb
 }
