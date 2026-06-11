@@ -77,7 +77,8 @@ jobs:
           tag_name: latest
           name: "Latest Continuous Build"
           body: "This release contains the latest automated builds from the main branch."
-          prerelease: true
+          prerelease: false
+          make_latest: true
           files: |
             ./artifacts/*.pkg.tar.zst
             ./artifacts/*.exe
